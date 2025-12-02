@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, Alert } from 'react-native'; 
 import axios from 'axios';
-import { addStyles } from '../styles'; // 👈 IMPORTED STYLES
+import { addStyles } from '../styles'; 
 
 const AddExpenseScreen = ({ navigation }) => {
   const [title, setTitle] = useState('');

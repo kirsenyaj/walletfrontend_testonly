@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, RefreshControl, Alert } from 'react-native'; 
 import axios from 'axios';
 import { useIsFocused } from '@react-navigation/native'; 
-import { listStyles } from '../styles'; // 👈 IMPORTED STYLES
+import { listStyles } from '../styles'; 
 
 const ExpenseListScreen = ({ navigation }) => {
   const [expenses, setExpenses] = useState([]);

@@ -1,14 +1,13 @@
 import React from 'react';
 import { View, Text, Button, Alert } from 'react-native'; 
 import axios from 'axios';
-import { detailStyles } from '../styles'; // 👈 IMPORTED STYLES
+import { detailStyles } from '../styles'; 
 
 const ExpenseDetailScreen = ({ route, navigation }) => {
   const { expense } = route.params;
 
   const handleDelete = async () => {
     try {
-      // ⚠️ IMPORTANT: REPLACE URL - Uses the expense ID
       const API_URL = `https://walletwatcher-backend-xxxx.onrender.com/registration/${expense.id}`;
       await axios.delete(API_URL);
 
@@ -29,7 +28,16 @@ const ExpenseDetailScreen = ({ route, navigation }) => {
       <Text style={detailStyles.label}>Category</Text>
       <Text style={detailStyles.value}>{expense.category || 'Uncategorized'}</Text>
       
+      {/* 👈 NEW EDIT BUTTON VIEW */}
       <View style={{ marginTop: 30 }}>
+        <Button 
+          title="Edit Expense" 
+          color="#f59e0b" // Amber color for edit
+          onPress={() => navigation.navigate('EditExpense', { expense: expense })}
+        />
+      </View>
+      
+      <View style={{ marginTop: 15 }}> 
         <Button 
           title="Delete Expense" 
           color="red" 

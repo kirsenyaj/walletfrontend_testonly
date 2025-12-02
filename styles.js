@@ -25,7 +25,7 @@ export const listStyles = StyleSheet.create({
         fontSize: 12 
     },
     amount: { 
-        color: '#db2777', // Rose color for amount
+        color: '#db2777',
         fontSize: 26, 
         fontWeight: 'bold' 
     },
@@ -33,7 +33,7 @@ export const listStyles = StyleSheet.create({
         position: 'absolute', 
         right: 20, 
         bottom: 28, 
-        backgroundColor: '#7c3aed', // Violet color
+        backgroundColor: '#7c3aed',
         width: 60,
         height: 60,
         borderRadius: 30,
@@ -47,7 +47,7 @@ export const listStyles = StyleSheet.create({
     }
 });
 
-// Styles for AddExpenseScreen
+// Styles for AddExpenseScreen (and was reused for EditExpenseScreen)
 export const addStyles = StyleSheet.create({
     container: {
         flex: 1,
