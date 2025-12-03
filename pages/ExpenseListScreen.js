@@ -13,7 +13,7 @@ const ExpenseListScreen = ({ navigation }) => {
     setIsRefreshing(true);
     try {
       // ⚠️ IMPORTANT: REPLACE WITH YOUR BACKEND URL
-      const API_URL = 'https://walletwatcher-backend-xxxx.onrender.com/registration'; 
+      const API_URL = 'http://127.0.0.1:8000/registration'; 
       const response = await axios.get(API_URL);
       setExpenses(response.data);
     } catch (error) {

@@ -11,7 +11,7 @@ const AddExpenseScreen = ({ navigation }) => {
   const handleSave = async () => {
     try {
       // ⚠️ IMPORTANT: REPLACE WITH YOUR ACTUAL RENDER BACKEND URL
-      const API_URL = 'https://walletwatcher-backend-xxxx.onrender.com/registration'; 
+      const API_URL = 'http://127.0.0.1:8000/registration'; 
       
       await axios.post(API_URL, {
         title: title,

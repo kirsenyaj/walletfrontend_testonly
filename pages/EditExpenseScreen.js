@@ -17,7 +17,7 @@ const EditExpenseScreen = ({ route, navigation }) => {
     try {
       // ⚠️ IMPORTANT: REPLACE WITH YOUR ACTUAL RENDER BACKEND URL. 
       // Uses the expense ID for the PUT request.
-      const API_URL = `https://walletwatcher-backend-xxxx.onrender.com/registration/${expense.id}`; 
+      const API_URL = `http://127.0.0.1:8000/registration/${expense.id}`; 
       
       await axios.put(API_URL, {
         title: title,

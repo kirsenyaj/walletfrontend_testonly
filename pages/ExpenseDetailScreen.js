@@ -8,7 +8,7 @@ const ExpenseDetailScreen = ({ route, navigation }) => {
 
   const handleDelete = async () => {
     try {
-      const API_URL = `https://walletwatcher-backend-xxxx.onrender.com/registration/${expense.id}`;
+      const API_URL = `http://127.0.0.1:8000/registration/${expense.id}`;
       await axios.delete(API_URL);
 
       Alert.alert("Deleted", "Expense removed");
